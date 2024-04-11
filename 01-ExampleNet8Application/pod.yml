@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: examplenet8-app
+  labels:
+    app: examplenet8-aks
+    component: examplenet8-app
+spec:
+ containers:
+   - image: examplenet8registry.azurecr.io/examplenet8application:latest
+     name: examplenet8-webapi
+     ports:
+       - containerPort: 8080
